@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h2>DSA Visualizer</h2>
+            <ul>
+                <li class="active" onclick="switchTab('linkedlist')">Linked List</li>
+                <li onclick="switchTab('stack')">Stack</li>
+                <li onclick="switchTab('queue')">Queue</li>
+            </ul>
+        </nav>
+
+        <main class="workspace">
+            <header>
+                <h1 id="ds-title">Linked List Operations</h1>
+            </header>
+
+            <div class="controls">
+                <input type="number" id="inputValue" placeholder="Enter Value">
+                <input type="number" id="inputPos" placeholder="Position (1-based)">
+                
+                <div id="btn-group-ll" class="btn-group">
+                    <button onclick="operate('ll_insert_start')">Insert Start</button>
+                    <button onclick="operate('ll_insert_end')">Insert End</button>
+                    <button onclick="operate('ll_insert_pos')">Insert at Pos</button>
+                    <button onclick="operate('ll_delete_pos')" class="danger">Delete at Pos</button>
+                </div>
+                
+                <div id="btn-group-stack" class="btn-group hidden">
+                    <button onclick="operate('stack_push')">Push</button>
+                    <button onclick="operate('stack_pop')" class="danger">Pop</button>
+                    <button onclick="operate('stack_peek')">Peek</button>
+                </div>
+
+                <div id="btn-group-queue" class="btn-group hidden">
+                    <button onclick="operate('queue_enqueue')">Enqueue</button>
+                    <button onclick="operate('queue_dequeue')" class="danger">Dequeue</button>
+                </div>
+            </div>
+
+            <div class="visualization-area">
+                <h3>Visualization Output</h3>
+                <div id="visualCanvas" class="canvas horizontal">
+                    <span class="placeholder">Waiting for operations...</span>
+                </div>
+                <div id="console-log" class="console-log"></div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
