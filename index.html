@@ -31,17 +31,21 @@
                     <button onclick="operate('ll_insert_end')">Insert End</button>
                     <button onclick="operate('ll_insert_pos')">Insert at Pos</button>
                     <button onclick="operate('ll_delete_pos')" class="danger">Delete at Pos</button>
+                    <button onclick="showHistory('Linked List')" class="secondary">📜 History</button>
                 </div>
                 
                 <div id="btn-group-stack" class="btn-group hidden">
                     <button onclick="operate('stack_push')">Push</button>
                     <button onclick="operate('stack_pop')" class="danger">Pop</button>
                     <button onclick="operate('stack_peek')">Peek</button>
+                    <button onclick="operate('stack_isempty')">Is Empty?</button>
+                    <button onclick="showHistory('Stack')" class="secondary">📜 History</button>
                 </div>
 
                 <div id="btn-group-queue" class="btn-group hidden">
                     <button onclick="operate('queue_enqueue')">Enqueue</button>
                     <button onclick="operate('queue_dequeue')" class="danger">Dequeue</button>
+                    <button onclick="showHistory('Queue')" class="secondary">📜 History</button>
                 </div>
             </div>
 
@@ -54,6 +58,15 @@
             </div>
         </main>
     </div>
+
+    <div id="historyModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeHistory()">&times;</span>
+            <h2 id="historyTitle">Operation History</h2>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
