@@ -1,11 +1,11 @@
 #include <vector>
-// Note: <iostream> is removed because a web backend doesn't use the console.
+
 
 std::vector<int> ll;
 std::vector<int> stackArr;
 std::vector<int> queueArr;
 
-// extern "C" prevents name mangling, allowing JavaScript to call these functions by their exact names.
+
 extern "C" {
 
     // ================= LINKED LIST =================
